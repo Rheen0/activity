@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Attendees - CCIS Week 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <span>CCIS Week 2025</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="index.html"><i class="bi bi-house-fill me-1"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="attendees.html"><i class="bi bi-people-fill me-1"></i> Attendees</a></li>
+          <li class="nav-item"><a class="nav-link px-3 fw-semibold" href="booths.html"><i class="bi bi-shop me-1"></i> Booths</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-success bg-opacity-10 py-5 mb-5 rounded-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="d-flex align-items-center mb-3">
+            <div>
+              <h1 class="display-4 fw-bold text-success mb-0">Event Attendees</h1>
+              <p class="text-muted mb-0">Registered participants for CCIS Week 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <div class="badge bg-success px-4 py-3 fs-5 mb-2 d-inline-block">
+            <i class="bi bi-person-check-fill me-2"></i>7 Registered
+          </div>
+          <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#addAttendeeModal">
+            <i class="bi bi-plus-circle me-2"></i>Add Attendee
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mb-5">
+    <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+      <div class="card-header bg-success text-white py-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="mb-0 fw-bold"><i class="bi bi-list-ul me-2"></i>Attendee List</h5>
+          <span class="badge bg-white text-success">Page 1 of 1</span>
+        </div>
+      </div>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-hover mb-0">
+            <thead class="table-light">
+              <tr>
+                <th class="py-3 ps-4"><i class="bi bi-person me-2 text-success"></i>Name</th>
+                <th class="py-3"><i class="bi bi-envelope me-2 text-success"></i>Email</th>
+                <th class="py-3"><i class="bi bi-ticket-perforated me-2 text-success"></i>Ticket Type</th>
+                <th class="py-3"><i class="bi bi-calendar-check me-2 text-success"></i>Registered</th>
+                <th class="py-3 text-center"><i class="bi bi-gear me-2 text-success"></i>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-3 ps-4">Rhandie J. Sales Jr.</td>
+                <td class="py-3">rhandie.salesjr@gmail.com</td>
+                <td class="py-3">Student</td>
+                <td class="py-3">Dec 2, 2025</td>
+                <td class="py-3 text-center">
+                  <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#editAttendeeModal" data-id="rhandie" data-name="Rhandie J. Sales Jr." data-email="rhandie.salesjr@gmail.com" data-ticket="Student">Edit</button>
+                  <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteAttendeeModal" data-id="rhandie">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 ps-4">Akisha Lei De Castro</td>
+                <td class="py-3">akisha.decastro@gmail.com</td>
+                <td class="py-3">General</td>
+                <td class="py-3">Dec 1, 2025</td>
+                <td class="py-3 text-center">
+                  <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#editAttendeeModal" data-id="akisha" data-name="Akisha Lei De Castro" data-email="akisha.decastro@gmail.com" data-ticket="General">Edit</button>
+                  <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteAttendeeModal" data-id="akisha">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 ps-4">Kerby Correa</td>
+                <td class="py-3">kerby.correa@gmail.com</td>
+                <td class="py-3">Student</td>
+                <td class="py-3">Nov 30, 2025</td>
+                <td class="py-3 text-center">
+                  <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#editAttendeeModal" data-id="kerby" data-name="Kerby Correa" data-email="kerby.correa@gmail.com" data-ticket="Student">Edit</button>
+                  <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteAttendeeModal" data-id="kerby">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 ps-4">Donna Reymatias</td>
+                <td class="py-3">donna.reymatias@gmail.com</td>
+                <td class="py-3">VIP</td>
+                <td class="py-3">Nov 29, 2025</td>
+                <td class="py-3 text-center">
+                  <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#editAttendeeModal" data-id="donna" data-name="Donna Reymatias" data-email="donna.reymatias@gmail.com" data-ticket="VIP">Edit</button>
+                  <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteAttendeeModal" data-id="donna">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 ps-4">Nicholas Jose</td>
+                <td class="py-3">nicholas.jose@gmail.com</td>
+                <td class="py-3">General</td>
+                <td class="py-3">Nov 28, 2025</td>
+                <td class="py-3 text-center">
+                  <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#editAttendeeModal" data-id="nicholas" data-name="Nicholas Jose" data-email="nicholas.jose@gmail.com" data-ticket="General">Edit</button>
+                  <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteAttendeeModal" data-id="nicholas">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="Attendee pagination" class="mt-4">
+      <ul class="pagination pagination-lg justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link rounded-pill me-2" href="#" aria-label="Previous"><i class="bi bi-chevron-left"></i></a>
+        </li>
+        <li class="page-item active"><a class="page-link rounded-pill" href="#">1</a></li>
+        <li class="page-item disabled">
+          <a class="page-link rounded-pill ms-2" href="#" aria-label="Next"><i class="bi bi-chevron-right"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="modal fade" id="addAttendeeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <form class="modal-content">
+        <input type="hidden" name="action" value="create">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Add Attendee</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Ticket Type</label>
+            <select name="ticket_type" class="form-control" required>
+              <option>Student</option>
+              <option>General</option>
+              <option>VIP</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Save Attendee</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editAttendeeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <form class="modal-content">
+        <input type="hidden" name="action" value="update">
+        <input type="hidden" name="id" id="edit-attendee-id">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Edit Attendee</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" id="edit-attendee-name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" id="edit-attendee-email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Ticket Type</label>
+            <select name="ticket_type" id="edit-attendee-ticket" class="form-control">
+              <option>Student</option>
+              <option>General</option>
+              <option>VIP</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="deleteAttendeeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">Delete Attendee</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">Are you sure you want to delete this attendee?</div>
+        <input type="hidden" id="delete-attendee-id" value="">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Yes, Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-custom text-white py-4 mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+            <h5 class="mb-0 fw-bold">CCIS Week 2025</h5>
+          </div>
+          <p class="mb-0 text-white-50 small">© 2025 CCIS Week. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/ui.js"></script>
+</body>
+
+</html>
